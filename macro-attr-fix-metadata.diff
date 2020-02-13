@@ -1,0 +1,20 @@
+--- macro-attr-0.2.0/Cargo.toml	2016-11-21T05:04:27+01:00
++++ macro-attr-0.2.0/Cargo.toml	2018-11-02T20:01:36.545071+01:00
+@@ -13,16 +13,8 @@
+     ".cargo/*",
+     "local/*",
+     "doc-pkg/*",
++    "scripts/*",
+     "update-docs.py",
+-]
+-
+-[workspace]
+-members = [
+-    "enum_derive",
+-    "newtype_derive",
+-    "tests/derive-name-macro",
+-    "tests/derive-name-proc",
+-    "tests/derive-name-test",
+ ]
+ 
+ [features]

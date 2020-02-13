@@ -1,0 +1,27 @@
+From 335ec79e8b3aaabde41300976c1dd2ca58d7a570 Mon Sep 17 00:00:00 2001
+From: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+Date: Wed, 22 Nov 2017 00:27:44 +0100
+Subject: [PATCH] add missing fragment specifier
+
+Fixes: https://github.com/DanielKeep/rust-custom-derive/issues/33
+Signed-off-by: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+---
+ tests/stable_encodable.rs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/stable_encodable.rs b/tests/stable_encodable.rs
+index fc1ef07..8d84d34 100644
+--- a/tests/stable_encodable.rs
++++ b/tests/stable_encodable.rs
+@@ -116,7 +116,7 @@ macro_rules! StableEncodable {
+ 
+     (
+         @extract_gen_args $fixed:tt,
+-        ($ty_name:ident: $($tail)*)
++        ($ty_name:ident: $($tail:tt)*)
+         -> bounds($($bounds:tt)*), ty_clss($($ty_clss:tt)*)
+     ) => {
+         StableEncodable! {
+-- 
+2.15.1
+
